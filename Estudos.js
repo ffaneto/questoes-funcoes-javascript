@@ -145,7 +145,7 @@ function analisarSequenciaDeVotos  (sequencia) {
 console.log(analisarSequenciaDeVotos([30, 20, 16, 70, 80]));
 
 
-function buscarNoVetor(array, target) {
+function arrayInteiros(array, target) {
     let i = 0;
 
     while (i < array.length) {
