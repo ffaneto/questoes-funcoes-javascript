@@ -61,9 +61,9 @@ function avaliarAlunos (listaDeAlunos) {
         let alunoAtual = listaDeAlunos[i];
 
         if (alunoAtual.nota >= 7.0) {
-            resultado.aprovados.push(alunoAtual.nome);
+            resultado.aprovados.push(alunoAtual.nome); // resultado.aprovados.push(listaDeAlunos[i].nome);
         } else {
-            resultado.reprovados.push(alunoAtual.nome);
+            resultado.reprovados.push(alunoAtual.nome); // resultado.reprovados.push(listaDeAlunos[i].nome);
         }
     }
 
@@ -89,17 +89,17 @@ console.log(avaliarAlunos(turmaA));
 console.log("---")
 
 function contagemRegressiva (inicio, parada) {
-    let resultado = "";
+
     for (let i = inicio; i > parada; i--) {
-        resultado += i + " ";
+        console.log(i);
         if(i === 50) {
             break;
         }
     }
-    return resultado;
+    return "Fim da contagem";
 }
 
-console.log(contagemRegressiva(3,1))
+console.log(contagemRegressiva(120,10))
 
 console.log("---")
 
@@ -143,3 +143,43 @@ function analisarSequenciaDeVotos  (sequencia) {
 }
 
 console.log(analisarSequenciaDeVotos([30, 20, 16, 70, 80]));
+
+
+function buscarNoVetor(array, target) {
+    let i = 0;
+
+    while (i < array.length) {
+        if (array[i] === target) {
+            return i;
+        }
+        i++;
+    }
+    return -1;
+}
+
+console.log(arrayInteiros([1,2,3,4], 4));
+
+function buscaOrdenadaMelhorada (array, target) {
+    let i =0;
+    while (i < array.length && array[i] <= target) {
+        if (array[i] === target) {
+            return "Alvo encontrado no índice: " + i;
+        }
+        i++;
+    }
+
+    return "Alvo não encontrado";
+}
+
+console.log(buscaOrdenadaMelhorada([1, 3, 5, 7, 9], 5))
+
+
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+console.log("---")
+
+for (let i = 10; i >= 1 ; i--) {
+    console.log(i);
+}
